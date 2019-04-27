@@ -1,0 +1,28 @@
+<!DOCTYPE hteml>
+<html>
+<head>
+<title>장례의 메모장★</title>
+<script> 
+var num = window.localStorage.getItem('num') ?  
+parseInt(window.localStorage.getItem('num')) : 
+0; 
+window.onload = putString; 
+function mis() { 
+   num -= 1; 
+   window.localStorage.setItem('num', num); 
+   putString(); 
+} 
+function putString() { 
+   document.getElementById('numberContainer').innerText = num; 
+} 
+</script>
+</head>
+<body>
+	<font size="2"><marquee bgcolor="white" scrollamount="150" behavior="alternate direction="right"><a href="꺼져.gif">못잡죠?ㅋ</marquee></font><center><BR>
+	<a href="꺼져.gif"><img src="버섯.jpg"></center></a>
+	<p><br>
+	<div id="numberContainer" style="text-align:center; "></div>
+	<div style="text-align:center;">
+	<button onclick="mis()">-</button></div>
+</body>
+</html>
